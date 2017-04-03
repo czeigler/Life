@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILife.cs" />
     <Compile Include="Life.cs" />
     <Compile Include="LifeUI.cs">
       <SubType>Form</SubType>

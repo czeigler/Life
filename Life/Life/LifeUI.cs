@@ -28,7 +28,7 @@ namespace Life
         private static readonly Color ALIVE_CELL_COLOUR = Color.Blue;
         private static readonly Color DEAD_CELL_COLOUR = Color.Gray;
 
-        private Life engine = null;
+        private ILife engine = null;
 
         // constructor
         // initializes WinForm application and sets up new engine

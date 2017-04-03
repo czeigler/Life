@@ -24,7 +24,7 @@ namespace Life
     //                  bool this[int, int] -   indexer     -   O(1)
     //                  Tick()              -   method      -   O(hw)
     // ***********************************************************************************
-    class Life
+    public class Life : ILife
     {
         // constructor
         // generates h x w grid of false values - grid cannot have non-positive values
@@ -41,7 +41,7 @@ namespace Life
 
         public int Height { get; private set; }     // height of internal grid
         public int Width { get; private set; }      // width of internal grid
-        public int Ticks { get; set; }              // label of current state
+        public int Ticks { get; private set;  }              // label of current state
         private bool[,] Grid { get; set; }          // internal grid for game
 
         // indexer
