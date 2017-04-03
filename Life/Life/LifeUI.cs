@@ -25,8 +25,8 @@ namespace Life
         private const int GRID_DIMENSION_PX = 450;
         private const int GRID_DIMENSION_CELLS = GRID_DIMENSION_PX / GRID_BUTTON_DIMENSION_PX;
 
-        private static readonly Color ALIVE_CELL_COLOUR = Color.White;
-        private static readonly Color DEAD_CELL_COLOUR = Color.DarkGray;
+        private static readonly Color ALIVE_CELL_COLOUR = Color.Blue;
+        private static readonly Color DEAD_CELL_COLOUR = Color.Gray;
 
         private Life engine = null;
 
@@ -71,6 +71,7 @@ namespace Life
             timer.Enabled = true;
             startUI.Enabled = false;
             stopUI.Enabled = true;
+            stepUI.Enabled = false;
         }
 
         // method - handles click event for 'Stop' button
@@ -80,6 +81,7 @@ namespace Life
             timer.Enabled = false;
             stopUI.Enabled = false;
             startUI.Enabled = true;
+            stepUI.Enabled = true;
         }
 
         // method - handles click event for 'Clear' button
@@ -122,6 +124,13 @@ namespace Life
             for (int linearIndex = 0; linearIndex < gridUI.Controls.Count; ++linearIndex)
                 gridUI.Controls[linearIndex].BackColor =
                     engine[linearIndex / engine.Width, linearIndex % engine.Width] ? ALIVE_CELL_COLOUR : DEAD_CELL_COLOUR;
+        }
+
+        private void stepUI_Click(object sender, EventArgs e)
+        {
+            engine.Tick();
+            generationUI.Text = engine.Ticks.ToString();
+            UpdateColours();
         }
     }
 }

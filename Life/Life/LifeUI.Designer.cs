@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.controlsUI = new System.Windows.Forms.GroupBox();
+            this.stepUI = new System.Windows.Forms.Button();
             this.generationUI = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.clearUI = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             // 
             // controlsUI
             // 
+            this.controlsUI.Controls.Add(this.stepUI);
             this.controlsUI.Controls.Add(this.generationUI);
             this.controlsUI.Controls.Add(this.label1);
             this.controlsUI.Controls.Add(this.clearUI);
@@ -52,6 +54,16 @@
             this.controlsUI.Size = new System.Drawing.Size(450, 50);
             this.controlsUI.TabIndex = 0;
             this.controlsUI.TabStop = false;
+            // 
+            // stepUI
+            // 
+            this.stepUI.Location = new System.Drawing.Point(146, 10);
+            this.stepUI.Name = "stepUI";
+            this.stepUI.Size = new System.Drawing.Size(65, 34);
+            this.stepUI.TabIndex = 5;
+            this.stepUI.Text = "Step";
+            this.stepUI.UseVisualStyleBackColor = true;
+            this.stepUI.Click += new System.EventHandler(this.stepUI_Click);
             // 
             // generationUI
             // 
@@ -73,9 +85,9 @@
             // 
             // clearUI
             // 
-            this.clearUI.Location = new System.Drawing.Point(218, 10);
+            this.clearUI.Location = new System.Drawing.Point(216, 10);
             this.clearUI.Name = "clearUI";
-            this.clearUI.Size = new System.Drawing.Size(100, 34);
+            this.clearUI.Size = new System.Drawing.Size(65, 34);
             this.clearUI.TabIndex = 2;
             this.clearUI.Text = "Clear";
             this.clearUI.UseVisualStyleBackColor = true;
@@ -83,11 +95,12 @@
             // 
             // stopUI
             // 
-            this.stopUI.Location = new System.Drawing.Point(112, 10);
+            this.stopUI.Location = new System.Drawing.Point(76, 10);
             this.stopUI.Name = "stopUI";
-            this.stopUI.Size = new System.Drawing.Size(100, 34);
+            this.stopUI.Size = new System.Drawing.Size(65, 34);
             this.stopUI.TabIndex = 1;
             this.stopUI.Text = "Stop";
+            this.stopUI.Enabled = false;
             this.stopUI.UseVisualStyleBackColor = true;
             this.stopUI.Click += new System.EventHandler(this.stopUI_Click);
             // 
@@ -95,7 +108,7 @@
             // 
             this.startUI.Location = new System.Drawing.Point(6, 10);
             this.startUI.Name = "startUI";
-            this.startUI.Size = new System.Drawing.Size(100, 34);
+            this.startUI.Size = new System.Drawing.Size(65, 34);
             this.startUI.TabIndex = 0;
             this.startUI.Text = "Start";
             this.startUI.UseVisualStyleBackColor = true;
@@ -143,6 +156,7 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TextBox generationUI;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button stepUI;
     }
 }
 
