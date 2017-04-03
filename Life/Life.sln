@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Life", "Life\Life.csproj", "{8011B377-9235-4300-80B8-EDBB694B5802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTest", "LifeTest\LifeTest.csproj", "{D3965B99-E84C-4B4D-8A16-6A31B6AF4174}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8011B377-9235-4300-80B8-EDBB694B5802}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8011B377-9235-4300-80B8-EDBB694B5802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8011B377-9235-4300-80B8-EDBB694B5802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3965B99-E84C-4B4D-8A16-6A31B6AF4174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3965B99-E84C-4B4D-8A16-6A31B6AF4174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3965B99-E84C-4B4D-8A16-6A31B6AF4174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3965B99-E84C-4B4D-8A16-6A31B6AF4174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
